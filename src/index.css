@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 215 98% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 197 100% 57%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 210 100% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section[id] {
+    scroll-margin-top: 240px;
+  }
+
+  @media (max-width: 768px) {
+    section[id] {
+      scroll-margin-top: 180px;
+    }
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors duration-200;
+  }
+
+  .section {
+    @apply py-16 px-4 md:px-8;
+  }
+
+  .container-ac {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-ac-text leading-tight;
+  }
+
+  .heading-md {
+    @apply text-2xl md:text-3xl font-bold text-ac-text leading-tight;
+  }
+
+  .heading-sm {
+    @apply text-xl md:text-2xl font-semibold text-ac-text leading-tight;
+  }
+
+  .subheading {
+    @apply text-lg md:text-xl text-ac-text-light mb-8;
+  }
+
+  .text-default {
+    @apply text-base text-ac-text-light;
+  }
+
+  .nav-link {
+    @apply text-ac-text-light hover:text-ac-primary transition duration-200;
+  }
+
+  .card-shadow {
+    @apply shadow-ac-md hover:shadow-ac-lg transition-shadow duration-200;
+  }
+
+  .feature-icon {
+    @apply w-12 h-12 text-ac-primary mb-4;
+  }
+
+  /* Hide scrollbar for Chrome, Safari, Firefox and Edge */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
